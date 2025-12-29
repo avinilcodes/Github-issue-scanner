@@ -61,41 +61,27 @@ Endpoints
 Prompts used
 
 - Prompts sent to AI coding tools while building:
-  - Create a FASTAPI/python boilerplate code to create to endpoints Endpoint: POST /scan (request{
-
-  "repo": "owner/repository-name"
-
-} respose {
-
-  "repo": "owner/repository-name",
-
-  "issues_fetched": 42,
-
-  "cached_successfully": true
-
-},
- respose {
-
-  "repo": "owner/repository-name",
-
-  "issues_fetched": 42,
-
-  "cached_successfully": true
-
-}), Endpoint: POST /analyze
-request {
-
-  "repo": "owner/repository-name",
-
-  "prompt": "Find themes across recent issues and recommend what the maintainers should fix first"
-
-}
-response 
+  - Create a FASTAPI/python boilerplate code to create to endpoints Endpoint: POST /scan
+    request
+    ```json
+    { "repo": "owner/repository-name"}
+    ```
+    respose
+    ```json
+    {"repo": "owner/repository-name", "issues_fetched": 42, "cached_successfully": true }
+    ```
+   Endpoint: POST /analyze
+    request 
+    ```json
+    {  "repo": "owner/repository-name",
+      "prompt": "Find themes across recent issues and recommend what the maintainers should fix first"}
+```
+response
+```json
 {
-
   "analysis": "<LLM-generated text here>"
-
 }.
+```
 
   - Create DB for caching issue those will be used in analyze endpoint while answering their questions
   - Write a README for above endpoints.
