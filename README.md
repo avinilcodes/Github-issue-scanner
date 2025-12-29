@@ -75,13 +75,13 @@ Prompts used
     ```json
     {  "repo": "owner/repository-name",
       "prompt": "Find themes across recent issues and recommend what the maintainers should fix first"}
-```
-response
-```json
-{
-  "analysis": "<LLM-generated text here>"
-}.
-```
+    ```
+  response
+  ```json
+  {
+    "analysis": "<LLM-generated text here>"
+  }.
+  ```
 
   - Create DB for caching issue those will be used in analyze endpoint while answering their questions
   - Write a README for above endpoints.
