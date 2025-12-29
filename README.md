@@ -105,5 +105,3 @@ Notes
 
 - This is intentionally minimal and focused on the backend. The server uses SQLite so cached data persists across restarts.
 - The analyzer truncates long issue bodies and limits the number of issues sent to the LLM to keep requests within model context limits.
-# Github-issue-scanner
-Github issue scanner
